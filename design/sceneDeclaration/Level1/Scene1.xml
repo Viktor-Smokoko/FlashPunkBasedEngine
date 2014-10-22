@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Scene>
+	<Entities>
+		<Entity instanceName="PlayerCar" declaration="dynamicObjects/PlayerCar.xml"/>
+		<Entity instanceName="Ground" declaration="staticObjects/Grounds/Level1/Scene1.xml"/>
+		<!--<Entity instanceName="Loader" declaration="markers/ForwardSceneLoader.xml"/>-->
+	</Entities>
+	<Loaders>
+		<!--<Loader controller="scnene/Scene2Loader.sceneLoader:Component"
+			targetDeclaration="staticObjects/Grounds/Level1/Scene2.xml"/>-->
+	</Loaders>
+	<Uldoaders>
+	</Uldoaders>	
+</Scene>

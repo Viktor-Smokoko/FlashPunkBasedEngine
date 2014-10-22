@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<General>
+	<PrefixAlias>
+		<alias key="gc" value="gameEngine.components"/>
+		<alias key="rc" value="raceEngine.components"/>
+	</PrefixAlias>
+	<SuffixAlias>		
+	</SuffixAlias>
+	<Converters>
+		<Converter name="Component" type="gameEngine.converters.ComponentConverter"/>
+	</Converters>
+	<Entity name="PlayerCar">
+		<Components>
+			<Component type="gc.Renderer" 
+				name="Renderer"
+				layer="0" />
+		</Components>
+		<Entities>	
+			<Entity name="BodyBackground">
+			<Components>		
+				<Component type="gc.Sprite"
+					name="BodyBackgroundSprite"
+					layer="0"/>
+			</Components>
+			<Entities>				
+			</Entities>
+			<Entity name="BodyForeground">
+			<Components>	
+				<Component type="gc.Sprite"
+					name="BodyForegroundSprite"
+					layer="2"/>
+			</Components>
+			<Entities>				
+			</Entities>
+			<Entity name="FrontWheel">
+			<Components>	
+				<Component type="gc.Sprite"
+					name="FrontWheelSprite"
+					layer="2"/>
+			</Components>
+			<Entities>				
+			</Entities>
+			<Entity name="RearWheel">
+			<Components>	
+				<Component type="gc.Sprite"
+					name="RearWheelSprite"
+					layer="1"/>
+			</Components>
+			<Entities>				
+			</Entities>
+		</Entities>
+</General>

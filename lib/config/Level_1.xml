@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LevelData>
+	<PrefixAlias>
+	</PrefixAlias>
+	<SuffixAlias>
+	</SuffixAlias>
+	<Scenes>
+		<Scene name="Level_1_Scene_1">
+			<Components>
+			</Components>
+			<Entities>
+				<Entity name="PalyerCar"
+						preset="PlayerCar" />
+					<Components>
+					</Components>
+					<Entities>
+					</Entities>
+				</Entity>
+				<Entity name="GroundLine">
+					<Components>
+						<Component type="gc.Renderer"
+								   name="GroundRenderer"
+								   layer="1"/>
+						<Component type="gc.PhysicsBody"
+								   name="GroundPhysicsBody"
+								   bodyType="STATIC:BodyType"
+								   bodyShape="this.GhoundShape:Component" 
+								   staticFriction="100"
+								   dynamicFriction="10" />
+						<Component type="rc.GroundShape"
+								   name="GhoundShape"
+								   height="10"
+								   groundType="HILL:GroundType" />
+						<Component type="rc.GroundLineGraphics"
+								   name="GroundLineGraphics"
+								   fill="Level1Fill:Class"
+								   line="0;5;0xFF0000:GroundLineStyle,-3;5;0x00FF00:GroundLineStyle,-7;5;0x0000FF:GroundLineStyle"/>
+					</Components>
+					<Entities>
+					</Entities>
+				</Entity>
+				<Entity name="SceneLoader">
+					<Components>
+						<Component type="sc.SceneLoader"
+								   name="Scene_2_Loader"
+								   triggerEntity="scene/PalyerCar"
+								   range="50"
+								   targetScene="Level_1_Scene_2"/>
+					</Components>
+					<Entities>
+					</Entities>
+				</Entity>
+			</Entities>
+		</Scene>
+		<Scene name="Level_1_Scene_2">
+			<Components>
+			</Components>
+			<Entities>
+				<Entity name="GroundLine">
+					<Components>
+						<Component type="gc.Renderer"
+								   name="GroundRenderer"
+								   layer="1"/>
+						<Component type="gc.PhysicsBody"
+								   name="GroundPhysicsBody"
+								   bodyType="STATIC:BodyType"
+								   bodyShape="this.GhoundShape:Component" 
+								   staticFriction="100"
+								   dynamicFriction="10" />
+						<Component type="rc.GroundShape"
+								   name="GhoundShape"
+								   height="10"
+								   groundType="HILL:GroundType" />
+						<Component type="rc.GroundLineGraphics"
+								   name="GroundLineGraphics"
+								   fill="Level1Fill:Class"
+								   line="0;5;0xFF0000:LineStyle,-3;5;0x00FF00:LineStyle,-7;5;0x0000FF:LineStyle" />
+					</Components>
+					<Entities>
+					</Entities>
+				</Entity>
+				<Entity name="SceneLoader">
+					<Components>
+						<Component type="sc.SceneLoader"
+								   name="Scene_2_Loader"
+								   triggerEntity="scene/PalyerCar"
+								   range="50"
+								   loadScene="Level_1_Scene_3"/>
+						<Component type="sc.SceneUnloader"
+								   name="Scene_1_Unloader"
+								   triggerEntity="scene/PalyerCar"
+								   range="50"
+								   targetScene="Level_1_Scene_1"/>
+					</Components>
+					<Entities>
+					</Entities>
+				</Entity>
+			</Entities>
+		</Scene>
+	</Scenes>
+</LevelData>

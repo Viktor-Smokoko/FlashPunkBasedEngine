@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<PhysicsDeclaration>
+	<!-- 
+		Materials section.
+		Definions of physics materials
+		
+		Example tag:
+			<Material 	name="Default"
+					density="1"
+					elasticity="0"
+					dynamicFriction="1"
+					staticFriction="2"
+					rollingFriction="0.01" />
+	-->
+	<Materials>
+		<Material 	name="Default"
+					density="1"
+					elasticity="0"
+					dynamicFriction="1"
+					staticFriction="2"
+					rollingFriction="0.01" />
+	</Materials>
+	<!-- 
+		Materials section.
+		Definions of physics interactions filers
+	-->
+	<InteractionFilters>
+		<InteractionFilter 	name="Default"
+							collisionMask="-1"
+							collsionGroup="1"
+							fluidMask="-1"
+							fluidGroup="1"
+							sensorMask="-1"
+							sensorGroup="1" />
+	</InteractionFilters>
+</PhysicsDeclaration>

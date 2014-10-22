@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Scene>
+	<PrefixAlias>
+	</PrefixAlias>
+	<SuffixAlias>		
+	</SuffixAlias>
+	<Scene>
+		<Components>			
+		</Components>
+		<Entities>	
+			<Entity Name="PalyerCar" Preset="PlayerCar">
+				<Components>	
+				</Components>
+				<Entities>				
+				</Entities>
+			</Entity>
+		</Entities>
+	</Scene>
+</Scene>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+	Declaring replacing suffixes, prefixes asnd explicit type readers 
+-->
+<DesignManifest>
+	<!--
+		Prefix section. Replace valuesprefix <key> with value <value>
+		Example: 
+			-----------------------------
+			<Alias key="gc" value="gameEngine.components" />
+			-----------------------------
+			gc::RigidBody => gameEngine.components::RigidBody
+		Tag syntax:
+			<Alias key="<key>" value="<value>" />
+	-->
+	<PrefixAlias>
+		<Alias key="gc" value="gameEngine.components" />
+		<Alias key="rc" value="raceEngine.components" />
+		<Alias key="sc" value="scrollerEngine.components" />
+	</PrefixAlias>
+	<!--
+		Prefix section. Replace valuesprefix <key> with value <value>
+		Example: 
+			-----------------------------
+			<Alias key="gc" value="gameEngine.components" />
+			-----------------------------
+			::RigidBodygc => ::RigidBodygameEngine.components
+		Tag syntax:
+			<Alias key="<key>" value="<value>" />
+	-->
+	<SuffixAlias>		
+	</SuffixAlias>
+	<!--
+		Readers section. Custom explicit type rading
+		Declare cutom readers at this section
+		<Reader name="<key name>" type="<full type name>" />
+	-->
+	<Readers>
+		<Reader name="Component" type="gameEngine.reading.readers.ComponentTypeReader" />
+		<Reader name="BodyType" type="gameEngine.reading.readers.BodyTypeTypeReader" />
+		<Reader name="nape.phys::BodyType" type="gameEngine.reading.readers.BodyTypeTypeReader" />
+		<Reader name="GroundLineStyle" type="racingEngine.reading.readers.GroundLineStyleTypeReader" />
+		<Reader name="ShapeType" type="gameEngine.reading.readers.ShapeTypeTypeReader" />
+		<Reader name="Keyboars" type="gameEngine.reading.readers.KeyTypeReader" />
+		<Reader name="CollisionType" type="gameEngine.reading.readers.CollsionTypeTypeReader" />
+	</Readers>
+</DesignManifest>

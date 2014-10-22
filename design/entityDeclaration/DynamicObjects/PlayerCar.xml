@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Entity name="PalyerCar" className="PlayerCar" unique="true">
+	<Components>
+		<Component type="gc.Renderer"
+			name="Renderer"
+			layer="0" />
+		<Component type="gc::RigidBody"
+			name="RigidBody"
+			bodyType="DYNAMIC"
+			mass="100"
+			staticFriction="100"
+			dynamicFriction="10" />
+		<!--<Component type="rc.FuelSource"
+			name="FuelSource"
+			source="this.UserMotorInput:Component"
+			fuelTank="this.FuelTank" />
+		<Component type="rc.FuelTank"
+			name="FuelTank"
+			capacity="100" />
+		<Component type="gc.UserAxisInput"
+			name="UserMotorInput"
+			keysPlus="W:Keyboard,UP:Keyboard"
+			lsMinus="S:Keyboard,DOWN:Keyboard" />
+		<Component type="rc.FlipTorque"
+			name="FlipTorque"
+			maxTorque="10"
+			source="this.UserFlipInput"/>
+		<Component type="gc.UserAxisInput"
+			name="UserFlipInput"
+			keysPlus="D:Keyboard,RIGHT:Keyboard"
+			keysMinus="A:Keyboard,LEFT:Keyboard" />
+		<Component type="rc.TurboForce"
+			name="TurboForce"
+			maxForce="10"
+			source="UserTurboInput"/>
+		<Component type="gc.UserAxisInput"
+			name="UserJumpInput"
+			keysPlus="SPACE:Keyboard" />
+		<Component type="gc.CollisionDetector"
+			name="CollisionDetector"
+			collisionType="General:CollistionType"/>-->
+	</Components>
+	<Entities>
+		<Entity name="Physics">
+			<Components>
+				<Component type="gc.BodyShape"
+						   name="BodyShape"
+						   shapeType="Polygon:ShapeType" 
+						   rigidBody="parent.RigidBody:Component" 
+						   collsionGroup="1"
+						   collisionMask="-1" />
+			</Components>
+			<Entities>					
+			</Entities>
+		</Entity>			
+		<Entity name="BodyForeground">
+			<Components>
+				<Component type="gc.Sprite"
+					name="Sprite"
+					layer="2"/>
+			</Components>
+			<Entities>					
+			</Entities>
+		</Entity>
+		<Entity Name="BodyBackground">
+			<Components>
+				<Component type="gc.Sprite"
+					name="Sprite"
+					layer="0"/>
+			</Components>
+			<Entities>					
+			</Entities>
+		</Entity>
+		<Entity Name="RearWheel">
+			<Components>
+				<Component type="gc.Sprite"
+					name="Sprite"
+					layer="1"/>
+				<Component type="gc.RigidBody"
+					name="RigidBody"
+					bodyType="DYNAMIC:BodyType"
+					mass="100"
+					staticFriction="100"
+					dynamicFriction="10" />
+				<!--<Component type="gc.BodyShape"
+					name="BodyShape"
+					shapeType="Circle:SapeType"
+					rigidBody="this.RigidBody:Component"
+					collsionGroup="1"
+					collisionMask="-1"/>
+				<Component type="rc.WheelJoint"
+					name="WheelJoint"
+					spring="10"
+					damper="10"
+					connectedBody="parent.RigidBody:Component"
+					angle="100"
+					springWay="1"/>
+				<Component type="rc.WheelMotor"
+					name="WheelMotor"
+					maxAngularVelocity="10"
+					maxTorque="10"
+					source="parent.FuelSource:Component" />-->
+			</Components>
+			<Entities>					
+			</Entities>
+		</Entity>
+		<Entity Name="FrontWheel">
+			<Components>
+				<Component type="gc.Sprite"
+					name="Sprite"
+					layer="1"/>
+				<Component type="gc.RigidBody"
+					name="RigidBody"
+					bodyType="DYNAMIC:BodyType"
+					collsisionMask="0x2"
+					mass="100"
+					staticFriction="100"
+					dynamicFriction="10" />
+				<!--<Component type="gc.BodyShape"
+					name="BodyShape"
+					shapeType="Circle:SapeType"
+					collsionGroup="1"
+					collisionMask="-1"/>
+				<Component type="rc.WheelJoint"
+					name="WheelJoint"
+					spring="10"
+					damper="10"
+					connectedBody="parent.RigidBody:Component"
+					angle="80"
+					springWay="1"/>-->
+			</Components>
+			<Entities>					
+			</Entities>
+		</Entity>
+	</Entities>
+</Entity>
